@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <title>quand un champ a le focus, définir sa bordure à 1px solid green.Quand le champ perd le focus, définir la bordure à 1px solid red</title>
+  </head>
+  <body>
+    <form>
+       <label for="nom">Nom : </label><input type="text" name="nom" value="" id="nom" />
+       <label for="prenom">Prénom : </label><input type="text" name="prenom" value="" id="prenom" />
+       <button type="button" name="button" >Envoyer</button>
+     </form>
+     <script>
+     $('input').focus(function(){
+         $('input').css('border', '1px solid green');
+     });
+     $('input').focusout(function(){
+         $('input').css('border', '1px solid red');
+     });
+     </script>
+  </body>
+</html>
